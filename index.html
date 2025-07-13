@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentForm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+
+<body>
+  
+    <h1 class="text-3xl font-bold text-center">STUDENT FORM</h1>
+
+    <!--Form-->
+
+    <form id="studentForm" class="bg-blue-300 w-80% mx-auto p-10 space-y-4">
+        <!--Name-->
+        <div class="flex items-center font-bold">
+            <label>Name</label>
+            <input type="text" placeholder="Enter your Name" id="name" class="ml-8  p-2">
+        </div>
+        <!--Age-->
+
+        <div class="flex items-center font-bold">
+            <label>Age</label>
+            <input type="text" placeholder="Enter you Age" id="age" class="ml-12 p-2">
+        </div>
+
+        <!-- Gender -->
+    <div class="flex items-center font-bold">
+      <label class="w-20 font-bold">Gender</label>
+      <div class="flex gap-8">
+        <label><input type="radio" name="gender" value="Male" required class="mr-1" /> Male</label>
+        <label><input type="radio" name="gender" value="Female" class="mr-1" /> Female</label>
+      </div>
+    </div>
+        <!-- Course -->
+    <div class="flex items-center">
+      <label for="course" class="w-20 font-bold">Course</label>
+      <select id="course" class="flex  p-2 w-50">
+        <option value="Python">Web Development</option>
+        <option value="C++">Devops</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Java">C++</option>
+      </select>
+    </div>
+
+            <!--E-mail-->
+
+            <div class="flex items-center font-bold">
+                <label>E-mail</label>
+                <input type="text" placeholder="Enter you E-mail" class="ml-8" id="email">
+            </div>
+<!-- Submit Button -->
+    <button type="submit"
+      class="w-full bg-blue-500 text-white font-semibold text-xl p-2 rounded hover:bg-green-800 transition">
+      Save</button>
+        
+    </form>
+
+                 <!-- Table -->
+  <div class="mt-10 max-w-5xl mx-auto">
+    <table class="w-full table-auto bg-white shadow-md rounded-xl">
+      <thead class="bg-blue-300 text-sm font-semibold">
+        <tr>
+          <th class="border p-2">NAME</th>
+          <th class="border p-2">AGE</th>
+          <th class="border p-2">COURSE</th>
+          <th class="border p-2">GENDER</th>
+          <th class="border p-2">EMAIL</th>
+          <th class="border p-2">ACTION</th>
+        </tr>
+      </thead>
+      <tbody id="studentTable">
+        <!-- Added Rows -->
+      </tbody>
+    </table>
+
+  </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
